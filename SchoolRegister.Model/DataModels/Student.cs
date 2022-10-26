@@ -4,8 +4,8 @@ using System;
 
 namespace SchoolRegister.Model.DataModels
 {
-    public class Student
-    {
+    public class Student{
+   /* 
         public Group Group { get; set; }
         public int? GroupId { get; set; }
         public IList<Grade> Grades { get; set; }
@@ -15,9 +15,7 @@ namespace SchoolRegister.Model.DataModels
         public IDictionary<String, Double> AverageGradePerSubject { get; }
         public IDictionary<String, List<GradeScale>> GradesPerSubject { get; }
 
-        public Student() {
-            
-        }
+        */
 
     }
 }

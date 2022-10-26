@@ -6,9 +6,11 @@ using System;
     {
         public class Parent {
 
-            public IList<Student> Students {get; set;}
+            public IList<Student> Students {get; set;}= default!;
 
-            public Parent(){}
+        public Parent(){
+            
+        }
 
         }
     }
