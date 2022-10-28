@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using SchoolRegister.Web.Models;
+using Microsoft.AspNetCore.Mvc; 
 
 namespace SchoolRegister.Web.Controllers;
 
@@ -26,6 +25,6 @@ public class HomeController : Controller
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View(new ViewModels.VM.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
