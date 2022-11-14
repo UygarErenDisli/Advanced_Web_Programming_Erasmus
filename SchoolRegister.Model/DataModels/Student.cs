@@ -16,8 +16,8 @@ Math.Round(Grades.Average(g => (int)g.GradeValue), 1);
 [NotMapped]
 public IDictionary<string, double> AverageGradePerSubject => Grades == null ? new Dictionary<string, double>() :
 Grades.GroupBy(g => g.Subject.Name)
-.Select(g => new { SubjectName = g.Key, AvgGrade = Math.Round(g.Average(avg => (int)avg.GradeValue), 1) })
-.ToDictionary(avg => avg.SubjectName, avg => avg.AvgGrade);
+    .Select(g => new { SubjectName = g.Key, AvgGrade = Math.Round(g.Average(avg => (int)avg.GradeValue), 1) })
+    .ToDictionary(avg => avg.SubjectName, avg => avg.AvgGrade);
 [NotMapped]
 public IDictionary<string, List<GradeScale>> GradesPerSubject => Grades == null ? new Dictionary<string,
     List<GradeScale>>() : Grades

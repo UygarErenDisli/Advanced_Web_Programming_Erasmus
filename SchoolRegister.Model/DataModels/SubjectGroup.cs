@@ -15,7 +15,7 @@ namespace SchoolRegister.Model.DataModels
                 [ForeignKey("Group")]
         public int? GroupId { get; set; }= default!;
 
-        public SubjectGroup() {
+        public  SubjectGroup() {
             
         }
     }

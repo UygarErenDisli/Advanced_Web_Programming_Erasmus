@@ -12,10 +12,11 @@ namespace SchoolRegister.Model.DataModels;
         [Required]
         public String? Name { get; set; }
         public String? Description { get; set; }
-        public IList<SubjectGroup> SubjectGroups { get; set; }= default!;
-        public Teacher? Teacher { get; set; }
+        public virtual IList<SubjectGroup> SubjectGroups { get; set; }= default!;
+        public virtual Teacher? Teacher { get; set; }
+        [ForeignKey("Teacher")]
         public int TeacherId { get; set; }= default!;
-        public IList<Grade> Grades { get; set; }= default!;
+        public virtual IList<Grade> Grades { get; set; }= default!;
 
         public Subject(){
 
