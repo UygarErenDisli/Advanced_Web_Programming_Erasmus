@@ -14,7 +14,7 @@ namespace SchoolRegister.Model.DataModels
         [Required]
         public String? Name { get; set; }
         public virtual IList<Student> Students { get; set; }
-        [ForeignKey("Students")]
+    
         public virtual IList<SubjectGroup> SubjectGroups { get; set; } = default!;
 
         public Group(){
