@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace SchoolRegister.ViewModels.VM
 {
-    public class GradesReportVm
+    public  class GradesReportVm
     {
-         public IList <GradeVm> Grades{get;set;}
+         public  IList <GradeVm>? Grades {get;set;}
     }
 }

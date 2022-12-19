@@ -26,19 +26,30 @@ namespace SchoolRegister.Services.ConcreteServices
             return Mapper.Map<GradeVm>(grade);
         }
 
-        public GradesReportVm GetGradesReport(GetGradesReportVm getGradesReportVm)
+        /*public GradesReportVm GetGradesReport(GetGradesReportVm getGradesReportVm)
         {
                 //var grade=(new Grade(){GradeValue=(GradeScale)getGradesReportVm.});
                 //DbContext.Users.OfType<Student>().First(getGradesReportVm).get(grade);
                 var s = DbContext.Users.OfType<Student>().First(s=>s.Id==getGradesReportVm.StudentId).Grades;
-                return new GradesReportVm(){Grades=Mapper.Map<GradeVm>(s)}
+                return new GradesReportVm(){Grades=Mapper.Map<GradeVm>(s)};
 
-                 return Mapper.Map<GradesReportVm>(grade);
+                 //return Mapper.Map<GradesReportVm>(grade);
+
+        }*/
+        public GradesReportVm GetGradesReportForParent(GetGradesReportVm getGradesReportVm)
+        {
+                //var grade=(new Grade(){GradeValue=(GradeScale)getGradesReportVm.});
+                //DbContext.Users.OfType<Student>().First(getGradesReportVm).get(grade);
+                var s = DbContext.Users.OfType<Parent>().First(s=>s.Id==getGradesReportVm.StudentId).Grades;
+                return new GradesReportVm(){Grades=Mapper.Map<GradeVm[]>(s)};
+
+                 //return Mapper.Map<GradesReportVm>(grade);
 
         }
-        public GradesReportVm GetGradesReportForStudent(GetGradesReportVm getGradesVm)
+        public GradesReportVm GetGradesReportForStudent(GetGradesReportVm getGradesReportVm)
         {
-            throw new NotImplementedException();
+            var s = DbContext.Users.OfType<Student>().First(s=>s.Id==getGradesReportVm.StudentId).Grades;
+                return new GradesReportVm(){Grades=Mapper.Map<GradeVm[]>(s)};
         }
     }
     }
